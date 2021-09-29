@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.PopupMenu
+import android.widget.Toast
 import com.withpersona.sdk.inquiry.Environment
 import com.withpersona.sdk.inquiry.Inquiry
 import kotlinx.android.synthetic.main.activity_main.*
@@ -63,6 +64,7 @@ class MainActivity : AppCompatActivity() {
         Inquiry.fromTemplate(templateId)
             .referenceId(personId)
             .environment(environment)
+            .theme(R.style.blackTheme)
             .build()
             .start(this, VERIFY_REQUEST_CODE)
     }
@@ -85,6 +87,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 is Inquiry.Response.Error -> {
                     // ...
+                    Toast.makeText(this, result.debugMessage, Toast.LENGTH_LONG).show()
                 }
             }
         }
