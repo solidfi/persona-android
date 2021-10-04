@@ -55,9 +55,9 @@ class MainActivity : AppCompatActivity() {
         // Choose your environment production or sandbox
         val environment =
             if (environmentEditText.text.toString() == getString(R.string.production)) {
-                Environment.SANDBOX
-            } else {
                 Environment.PRODUCTION
+            } else {
+                Environment.SANDBOX
             }
 
         // Verification starts using Persona UI
