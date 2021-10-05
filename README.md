@@ -35,11 +35,11 @@ git clone https://github.com/solidfi/persona-android.git
 
 - Person ID   : You can generate and provide a unique id which we will associate with the inquiry.
                 The identifier can be used to monitor user progress in newly created inquiries.
-- Template ID : You can find your template ID on the Persona Dashboard under [Development](https://withpersona.com/dashboard/development)
-- Environment : The Persona API environment on which to create inquiries. For sandbox and production
+- Template ID : You can find your template ID on the Persona Dashboard under Development.
+- Environment : The Persona API environment on which to create inquiries. For sandbox and production.
 
 #### Reference links :
 
-- [Persona Integration](https://docs.withpersona.com/docs/ios-inquiry-sdk-integration-guide)
+- [Persona Integration](https://docs.withpersona.com/docs/android-sdk-integration-guide)
 - [Solid API Integration](https://documenter.getpostman.com/view/13543869/TWDfEDwX#ce8c0e57-0dcf-45ea-87d8-6f03a302e027)
   
