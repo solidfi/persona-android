@@ -1,9 +1,7 @@
 <resources>
     <string name="app_name">Persona Sample</string>
-    <string name="person_id">Person Id</string>
-    <string name="template_id">Template Id</string>
-    <string name="environment">Environment</string>
-    <string name="verify">Verify</string>
     <string name="sandbox">Sandbox</string>
     <string name="production">Production</string>
+    <string name="enter_enquiry_url">Enter Enquiry URL</string>
+    <string name="start_persona_identification">Start Persona Identification</string>
 </resources>
