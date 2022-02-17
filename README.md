@@ -29,6 +29,8 @@ git clone https://github.com/solidfi/persona-android.git
 
 - In order to start building and running the Persona sample, you'll need 'enquiry-url' to open in Webview.
 - In a real-life integration, the 'enquiry-url' would have to be requested from idv-submit api.
+- In order to get the callback response from persona we need use redirection-uri from the inquiry url.
+- Once the process is done you can see the status of the verification on the persona dashboard.
 
 #### Reference links :
 
