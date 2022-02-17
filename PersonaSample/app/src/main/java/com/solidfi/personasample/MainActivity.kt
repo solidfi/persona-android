@@ -69,13 +69,19 @@ class MainActivity : AppCompatActivity() {
         webView.settings.mediaPlaybackRequiresUserGesture = false
 
         webView.webViewClient = object : WebViewClient() {
+            @SuppressLint("SetTextI18n")
             override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
                 super.shouldOverrideUrlLoading(view, request)
-                webView.visibility = View.GONE
-                urlEditText.visibility = View.VISIBLE
-                verifyButton.visibility = View.VISIBLE
-                logsTextView.text = request.toString()
-                return true
+                val parsedUri = Uri.parse(request?.url.toString())
+                return if (parsedUri.authority == "personacallback") {
+                    webView.visibility = View.GONE
+                    urlEditText.visibility = View.VISIBLE
+                    verifyButton.visibility = View.VISIBLE
+                    logsTextView.text = getString(R.string.verification_success)
+                    true
+                } else {
+                    false
+                }
             }
         }
 
@@ -141,7 +147,7 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
         }
-        webView.loadUrl(urlEditText.text.toString())
+        webView.loadUrl(urlEditText.text.toString() + "&redirect-uri=" + redirectUri)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
