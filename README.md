@@ -10,10 +10,13 @@ Android application intended to showcase the Persona library integration
 
 Our configuration is currently set to the following:
 ```groovy
-minSdkVersion = 21
-targetSdkVersion = 30
-compileSdkVersion 31
+  compileSdk 31
+  minSdk 21
+  targetSdk 31
 ```
+
+Android Studio - Android Studio Chipmunk | 2021.2.1 Patch 1
+
 
 ## Configure this project
 
